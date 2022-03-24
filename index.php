@@ -64,10 +64,10 @@
                                  <li class="nav-item">
                                     <a class="nav-link" href="#">Home</a>
                                  </li>
-                                 <!-- <li class="nav-item">
+                                 <li class="nav-item">
                                     <a class="nav-link" href="#">About</a>
                                  </li>
-                                 <li class="nav-item">
+                                 <!-- <li class="nav-item">
                                     <a class="nav-link" href="#">Contact</a>
                                  </li> -->
                               </ul>
@@ -152,15 +152,15 @@
                         <!-- <div style="background: url(images/produk/produk-1.jpg)"></div> -->
                      </div>
                      <div class='blanter-owl-image'>
-                        <img src='images/produk/produk-2.jpg'/>
+                        <img src='images/produk/pixdata.png'/>
                         <!-- <div style="background: url(images/produk/produk-2.jpg)"></div> -->
                      </div>
                      <div class='blanter-owl-image'>
-                        <img src='images/produk/pixpulsa.png'/>
+                        <img src='images/produk/pixgames.png'/>
                         <!-- <div style="background: url(images/produk/produk-1.jpg)"></div> -->
                      </div>
                      <div class='blanter-owl-image'>
-                        <img src='images/produk/produk-2.jpg'/>
+                        <img src='images/produk/pixbill.png'/>
                         <!-- <div style="background: url(images/produk/produk-2.jpg)"></div> -->
                      </div>
                      <!-- END -->
@@ -256,7 +256,7 @@
                   <div class="col-md-12">
                      <ul class="social_icon">
                         <div>
-                           <li><a href="#"><i class="fa fa-whatsapp" aria-hidden="true"></i></a></li>
+                           <li><a href="https://wa.me/6282322525083"><i class="fa fa-whatsapp" aria-hidden="true"></i></a></li>
                            <li><a href="#"><i class="fa fa-telegram" aria-hidden="true"></i></i></a></li>
                            <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></i></a></li>
                         </div>
