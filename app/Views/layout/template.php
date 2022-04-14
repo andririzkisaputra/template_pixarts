@@ -19,7 +19,7 @@
     <!-- Responsive-->
     <link rel="stylesheet" href="<?= base_url('assets/css/responsive.css') ?>">
     <!-- fevicon -->
-    <link rel="icon" href="<?= base_url('assets/images/fevicon.png') ?>" type="image/gif" />
+    <link href="<?= base_url('assets/images/fevicon.png') ?>" rel="icon">
     <!-- Scrollbar Custom CSS -->
     <link rel="stylesheet" href="<?= base_url('assets/css/jquery.mCustomScrollbar.min.css') ?>">
     <!-- Tweaks for older IEs-->
@@ -33,13 +33,13 @@
 <body class="main-layout">
     <!-- loader  -->
     <div class="loader_bg">
-        <div class="loader"><img src="<?= base_url('assets/images/loading.gif'); ?>" alt="#" /></div>
+        <div class="loader"><img src="<?= base_url('assets/images/loading.gif'); ?>"/></div>
     </div>
     <!-- end loader -->
     <!-- header -->
     <header>
         <!-- header inner -->
-        <div  class="head_top">
+        <div  class="head_top" id="home">
             <div class="header">
             <div class="container-fluid">
                 <div class="row">
@@ -60,14 +60,14 @@
                         <div class="collapse navbar-collapse" id="navbarsExample04">
                             <ul class="navbar-nav mr-auto">
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#">Home</a>
+                                    <a class="nav-link" href="#home">Home</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#">About</a>
+                                    <a class="nav-link" href="#produk">Produk</a>
                                 </li>
-                                <!-- <li class="nav-item">
-                                    <a class="nav-link" href="#">Contact</a>
-                                </li> -->
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#kontak">Kontak</a>
+                                </li>
                             </ul>
                         </div>
                         </nav>
@@ -85,7 +85,7 @@
                         <div class="text-bg">
                         <h1>Digital TopUp</h1>
                         <p>Isi pulsa, paket data, bayar tagihan dan TopUp bisa langsung dengan sekali klik, mudah aman terpercaya</p>
-                        <a href="#">Read More</a>
+                        <a href="#produk">Read More</a>
                         </div>
                     </div>
                     <div class="col-md-6">
@@ -116,14 +116,26 @@
                 <div class="col-md-12">
                     <ul class="social_icon">
                         <div>
-                        <li><a href="https://wa.me/6282322525083"><i class="fa fa-whatsapp" aria-hidden="true"></i></a></li>
-                        <li><a href="#"><i class="fa fa-telegram" aria-hidden="true"></i></i></a></li>
-                        <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></i></a></li>
+                            <li>
+                                <a href="https://wa.me/6282322525083" target="_blank">
+                                    <i class="fa fa-whatsapp" aria-hidden="true"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank">
+                                    <i class="fa fa-telegram" aria-hidden="true"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank">
+                                    <i class="fa fa-instagram" aria-hidden="true"></i>
+                                </a>
+                            </li>
                         </div>
                         <div>
-                        <a href="https://play.google.com/store" aria-hidden="true">
-                            <img src="<?= base_url('assets/images/play-store.png'); ?>" alt="#" width="200"/>
-                        </a>
+                            <a href="https://play.google.com/store" aria-hidden="true">
+                                <img src="<?= base_url('assets/images/play-store.png'); ?>" alt="#" width="200"/>
+                            </a>
                         </div>
                     </ul>
                 </div>
@@ -147,6 +159,7 @@
     <script src="<?= base_url('assets/js/bootstrap.bundle.min.js') ?>"></script>
     <script src="<?= base_url('assets/js/jquery-3.0.0.min.js') ?>"></script>
     <script src="<?= base_url('assets/js/plugin.js') ?>"></script>
+    <script src="<?= base_url('assets/js/send_email.js') ?>"></script>
     <!-- sidebar -->
     <script src="<?= base_url('assets/js/jquery.mCustomScrollbar.concat.min.js') ?>"></script>
     <script src="<?= base_url('assets/js/custom.js') ?>"></script>
