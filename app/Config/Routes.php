@@ -17,11 +17,33 @@ if (file_exists(SYSTEMPATH . 'Config/Routes.php')) {
  * --------------------------------------------------------------------
  */
 $routes->setDefaultNamespace('App\Controllers');
-$routes->setDefaultController('Home');
+$routes->setDefaultController('Dashboard');
 $routes->setDefaultMethod('index');
 $routes->setTranslateURIDashes(false);
 $routes->set404Override();
 $routes->setAutoRoute(true);
+
+// Set Config Modules
+$router = service('router');
+$module = $router->controllerName();
+$routes->get('/', '\App\Modules\\' . $module . '\Controllers\\' . $module . '::index');
+	
+$router = service('router');
+$module = $router->controllerName();
+$routes->get('/', '\App\Modules\\' . $module . '\Controllers\\' . $module . '::index');
+
+$dir =  scandir('app/Modules/');
+foreach ($dir as $module) 
+{
+	if ($module == '.' || $module == '..') {
+		continue;
+	}
+	
+	$file = scandir('app/Modules/' . $module);
+	if (in_array('Routes.php', $file)) {
+		include 'app/Modules/' . $module . '/Routes.php';
+	}
+}
 
 /*
  * --------------------------------------------------------------------
@@ -32,7 +54,7 @@ $routes->setAutoRoute(true);
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
 $routes->get('/', 'Home::index');
-$routes->get('/email', 'Home::send_email');
+// $routes->get('/email', 'Home::send_email');
 
 /*
  * --------------------------------------------------------------------
