@@ -25,13 +25,14 @@ $(document).on('click','#send_btn',function(){
         email &&
         catatan
     ) {
-        subject = nama+'Mengirim Pesan, Hubungi Ke Nomor : '+notelp+' atau Email : '+email
         $.ajax({
             url      : baseUrl+'/email',
             method   : 'POST',
             dataType : 'JSON',
             data     : {
-                subject : subject,
+                nama    : nama,
+                notelp  : notelp,
+                email   : email,
                 message : catatan
             },
             success:function(response) {

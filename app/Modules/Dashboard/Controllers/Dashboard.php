@@ -2,6 +2,7 @@
 namespace App\Modules\Dashboard\Controllers;
 
 use App\Libraries\Email;
+use App\Libraries\Message;
 
 class Dashboard extends \App\Controllers\BaseController
 {
@@ -18,24 +19,17 @@ class Dashboard extends \App\Controllers\BaseController
 
     public function send_email()
     {
-        $email   = new Email();
-        $code    = 400;
-        $data    = [];
-        $message = 'Permintaan tidak dapat dipahami oleh server karena sintaks yang salah. Klien TIDAK HARUS mengulangi permintaan tanpa modifikasi.';
-        $status  = false;
+        $result = (new Message)->error_input();
 
         if($this->request->isAJAX()){
-            $data    = $this->request->getPost();
-            $is_mail = (new Email)->mail($data);
-            $code    = ($is_mail) ? 200        : $code;
-            $status  = ($is_mail) ? true       : $status;
-            $message = ($is_mail) ? 'berhasil' : $message;
+            $post = $this->request->getPost();
+            $to      = 'pixartsindonesia@gmail.com';
+            $from    = 'no-replay@gmail.com';
+            $subject = 'Dari '.$post['nama'];
+            $message = $post['message'].', Hubungi Ke Nomor : '.$post['notelp'].' atau Email : '.$post['email'].', Waktu Mengirim Pesan : '.date('Y-m-d H:i:s');
+            $is_mail = (new Email)->mail($from, $to, $subject, $message);
+            $result  = ($is_mail) ? (new Message)->success_input($post) : $result;
         }
-
-        $result['code']    = $code;
-        $result['data']    = $data;
-        $result['message'] = $message;
-        $result['status']  = $status;
 
         return print_r(json_encode($result));
     }

@@ -15,6 +15,11 @@ return [
    'produk-tersedia'             => 'Products available are guaranteed cheap, safe and reliable',
    'masukan'                     => 'Input',
    'title-masukan'               => 'Your input means a lot to us.',
+   '400'                         => 'The request could not be understood by the server due to incorrect syntax. The client SHOULD NOT repeat the request without modifications.',
+   '200'                         => 'Indicates that the request has succeeded.',
+   '201'                         => 'Indicates that the request has succeeded and a new resource has been created as a result.',
+   'berhasil'                    => 'Success',
+   'gagal'                       => 'Failed',
 
    // Input
    'nama'                        => 'Name',
