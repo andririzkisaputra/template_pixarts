@@ -1,4 +1,7 @@
 $(document).on('click','#send_btn',function(){
+    var getUrl = window.location;
+    var baseUrl = getUrl.origin+"/"+getUrl.pathname.split('/')[1];
+    console.log(baseUrl);
     let nama           = $('#nama').val();
     let notelp         = $('#notelp').val();
     let email          = $('#email').val();
@@ -22,17 +25,17 @@ $(document).on('click','#send_btn',function(){
         email &&
         catatan
     ) {
-        subject = nama+' Mengirim Pesan, Hubungi Ke Nomor : ' + notelp + ' atau Email : ' + email
+        subject = nama+'Mengirim Pesan, Hubungi Ke Nomor : '+notelp+' atau Email : '+email
         $.ajax({
-            url      : 'email',
-            type     : 'post',
-            dataType : 'json',
+            url      : baseUrl+'/email',
+            method   : 'POST',
+            dataType : 'JSON',
             data     : {
                 subject : subject,
                 message : catatan
             },
             success:function(response) {
-                alert(response);
+                console.log(response);
                 $('#nama').css(border_success);
                 $('#notelp').css(border_success);
                 $('#email').css(border_success);

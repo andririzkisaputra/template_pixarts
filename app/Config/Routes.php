@@ -21,16 +21,12 @@ $routes->setDefaultController('Dashboard');
 $routes->setDefaultMethod('index');
 $routes->setTranslateURIDashes(false);
 $routes->set404Override();
-$routes->setAutoRoute(true);
+$routes->setAutoRoute(false);
 
 // Set Config Modules
 $router = service('router');
 $module = $router->controllerName();
-$routes->get('/', '\App\Modules\\' . $module . '\Controllers\\' . $module . '::index');
-	
-$router = service('router');
-$module = $router->controllerName();
-$routes->get('/', '\App\Modules\\' . $module . '\Controllers\\' . $module . '::index');
+$routes->get('/','\App\Modules\\'.$module.'\Controllers\\'.$module.'::index');
 
 $dir =  scandir('app/Modules/');
 foreach ($dir as $module) 
@@ -54,7 +50,13 @@ foreach ($dir as $module)
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
 $routes->get('/', 'Home::index');
-// $routes->get('/email', 'Home::send_email');
+$routes->get('/lang/{locale}', 'SelectLanguage::index');
+
+// Add Routes Modules
+$routes->group("", ["namespace" => "\App\Modules\Dashboard\Controllers"], function ($routes) {
+	$routes->add("/", "Dashboard::index");
+	$routes->add("/email", "Dashboard::send_email");
+});
 
 /*
  * --------------------------------------------------------------------

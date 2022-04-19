@@ -35,7 +35,13 @@ class BaseController extends Controller
      *
      * @var array
      */
-    protected $helpers = [];
+    protected $helpers = ['url'];
+    
+    /**
+     * The data to be passed to the view.
+     * @var array
+     */
+    protected $viewData = [];
 
     /**
      * Constructor.
@@ -48,5 +54,12 @@ class BaseController extends Controller
         // Preload any models, libraries, etc, here.
 
         // E.g.: $this->session = \Config\Services::session();
+        
+        $session = \Config\Services::session();
+        $language = \Config\Services::language();
+        $language->setLocale($session->lang);
+
+        $this->viewData['locale'] = $session->lang;
+        $this->viewData['supportedLocales'] = $request->config->supportedLocales;
     }
 }

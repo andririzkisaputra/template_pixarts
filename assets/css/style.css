@@ -809,6 +809,11 @@ ul.social_icon li a:hover {
      color: #23262d;
 }
 
+.bendera {
+     border: 1px solid rgba(0,0,0,0.69);
+     border-radius: 0.25rem;
+}
+
 
 /** end footer **/
 

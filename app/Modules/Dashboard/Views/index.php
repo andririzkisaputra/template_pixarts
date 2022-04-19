@@ -2,7 +2,7 @@
 // namespace App\Modules\Dashboard\Views;
 
 ?>
-<?= $this->extend('layout/template') ?>
+<?= $this->extend('App\Modules\Dashboard\Views\template') ?>
 <?= $this->section('content') ?>
     <!-- Projects -->
     <div class="projects" id="produk">
@@ -10,9 +10,9 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="titlepage">
-                        <span>Produk</span>
-                        <h2>Tersedia dengan berbagai macam produk</h2>
-                        <p>Produk yang tersedia di jamin murah, aman dan terpercaya</p>
+                        <span><?= lang('lang.produk'); ?></span>
+                        <h2><?= lang('lang.tersedia'); ?></h2>
+                        <p><?= lang('lang.produk-tersedia'); ?></p>
                     </div>
                 </div>
             </div>
@@ -46,8 +46,8 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="titlepage">
-                        <h2>Masukan</h2>
-                        <span>Masukan mu sangat berarti buat kami.</span>
+                        <h2><?= lang('lang.masukan'); ?></h2>
+                        <span><?= lang('lang.title-masukan'); ?></span>
                     </div>
                 </div>
             </div>
@@ -58,19 +58,19 @@
                 <!-- <form class="main_form"> -->
                 <div class="main_form row">
                     <div class="col-md-12">
-                        <input class="form_contril" placeholder="Nama" type="text" name="nama" id="nama">
+                        <input class="form_contril" placeholder="<?= lang('lang.nama'); ?>" type="text" name="nama" id="nama">
                     </div>
                     <div class="col-md-12">
-                        <input class="form_contril" placeholder="Nomor HP" type="text" name="notelp" id="notelp">
+                        <input class="form_contril" placeholder="<?= lang('lang.notelp'); ?>" type="text" name="notelp" id="notelp">
                     </div>
                     <div class="col-md-12">
-                        <input class="form_contril" placeholder="Email" type="text" name="email" id="email">
+                        <input class="form_contril" placeholder="<?= lang('lang.e-mail'); ?>" type="text" name="email" id="email">
                     </div>
                     <div class="col-md-12">
-                        <textarea class="textarea" placeholder="Catatan" type="text" name="catatan" id="catatan" rows="5"></textarea>
+                        <textarea class="textarea" placeholder="<?= lang('lang.catatan'); ?>" type="text" name="catatan" id="catatan" rows="5"></textarea>
                     </div>
                     <div class="col-sm-12">
-                        <button id="send_btn" class="send_btn">Kirim</button>
+                        <button id="send_btn" class="send_btn"><?= lang('lang.kirim'); ?></button>
                     </div>
                 </div>
                 <!-- </form> -->

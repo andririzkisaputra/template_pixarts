@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="<?= $locale ?>">
 <head>
     <!-- basic -->
     <meta charset="utf-8">
@@ -60,13 +60,28 @@
                         <div class="collapse navbar-collapse" id="navbarsExample04">
                             <ul class="navbar-nav mr-auto">
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#home">Home</a>
+                                    <a class="nav-link" href="#home"><?= lang('lang.beranda'); ?></a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#produk">Produk</a>
+                                    <a class="nav-link" href="#produk"><?= lang('lang.produk'); ?></a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#kontak">Kontak</a>
+                                    <a class="nav-link" href="#kontak"><?= lang('lang.kontak'); ?></a>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <?= lang('lang.pilih-bahasa'); ?>
+                                    </a>
+                                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                        <a class="dropdown-item" href="lang/id">
+                                            <img class="bendera" src="<?= base_url('assets/images/bendera/indonesia.png'); ?>" width="30">
+                                            <?= lang('lang.indonesia'); ?>
+                                        </a>
+                                        <a class="dropdown-item" href="lang/en">
+                                            <img class="bendera" src="<?= base_url('assets/images/bendera/inggris.png'); ?>" width="30">
+                                            <?= lang('lang.inggris'); ?>
+                                        </a>
+                                    </div>
                                 </li>
                             </ul>
                         </div>
@@ -83,9 +98,9 @@
                 <div class="row d_flex">
                     <div class="col-md-6">
                         <div class="text-bg">
-                        <h1>Digital TopUp</h1>
-                        <p>Isi pulsa, paket data, bayar tagihan dan TopUp bisa langsung dengan sekali klik, mudah aman terpercaya</p>
-                        <a href="#produk">Read More</a>
+                        <h1><?= lang('lang.header-top-up') ?></h1>
+                        <p><?= lang('lang.title-top-up') ?></p>
+                        <a href="#produk"><?= lang('lang.selengkapnya') ?></a>
                         </div>
                     </div>
                     <div class="col-md-6">
