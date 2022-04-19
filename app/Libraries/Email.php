@@ -4,18 +4,23 @@ namespace App\Libraries;
 
 class Email
 {
+    public function __construct()
+	{
+		$this->email = \Config\Services::email();
+	}
+
     public function mail($from, $to, $subject, $message, $attachment = '')
     {
-        $email = \Config\Services::email();
+        $this->email = \Config\Services::email();
 
-        $email->setFrom($from,'Pixarts');
-		$email->setTo($to);
+        $this->email->setFrom($from,'Pixarts');
+		$this->email->setTo($to);
 
-		$email->attach($attachment);
+		$this->email->attach($attachment);
 
-		$email->setSubject($subject);
-		$email->setMessage($message);
-		if(!$email->send()){
+		$this->email->setSubject($subject);
+		$this->email->setMessage($message);
+		if(!$this->email->send()){
 			return false;
 		}else{
 			return true;
