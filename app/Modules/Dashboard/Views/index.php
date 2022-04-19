@@ -55,7 +55,6 @@
         <div class="container">
             <div class="row">
             <div class="col-md-12">
-                <!-- <form class="main_form"> -->
                 <div class="main_form row">
                     <div class="col-md-12">
                         <input class="form_contril" placeholder="<?= lang('lang.nama'); ?>" type="text" name="nama" id="nama">
@@ -70,10 +69,12 @@
                         <textarea class="textarea" placeholder="<?= lang('lang.catatan'); ?>" type="text" name="catatan" id="catatan" rows="5"></textarea>
                     </div>
                     <div class="col-sm-12">
-                        <button id="send_btn" class="send_btn"><?= lang('lang.kirim'); ?></button>
+                        <button id="send_btn" class="send_btn">
+                            <p id="text-kirim"><?= lang('lang.kirim'); ?></p>
+                            <img id="loading-kirim" src="<?= base_url('assets/images/loading.gif'); ?>" width="40">
+                        </button>
                     </div>
                 </div>
-                <!-- </form> -->
             </div>
             </div>
         </div>

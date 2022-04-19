@@ -59,9 +59,9 @@
                         </button>
                         <div class="collapse navbar-collapse" id="navbarsExample04">
                             <ul class="navbar-nav mr-auto">
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#home"><?= lang('lang.beranda'); ?></a>
-                                </li>
+                                <!-- <li class="nav-item">
+                                    <a class="nav-link" href="#home"><?php lang('lang.beranda'); ?></a>
+                                </li> -->
                                 <li class="nav-item">
                                     <a class="nav-link" href="#produk"><?= lang('lang.produk'); ?></a>
                                 </li>
