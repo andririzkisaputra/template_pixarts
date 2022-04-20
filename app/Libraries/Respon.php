@@ -2,7 +2,7 @@
 
 namespace App\Libraries;
 
-class Message
+class Respon
 {
     public function success_input($data)
     {

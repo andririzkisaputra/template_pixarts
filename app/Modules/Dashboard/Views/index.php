@@ -1,15 +1,11 @@
-<?php 
-// namespace App\Modules\Dashboard\Views;
-
-?>
 <?= $this->extend('App\Modules\Dashboard\Views\template') ?>
 <?= $this->section('content') ?>
     <!-- Projects -->
-    <div class="projects" id="produk">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="titlepage">
+    <div class='projects' id='produk'>
+        <div class='container'>
+            <div class='row'>
+                <div class='col-md-12'>
+                    <div class='titlepage'>
                         <span><?= lang('lang.produk'); ?></span>
                         <h2><?= lang('lang.tersedia'); ?></h2>
                         <p><?= lang('lang.produk-tersedia'); ?></p>
@@ -41,37 +37,37 @@
     <!-- end projects -->
 
     <!-- contact -->
-    <div id="kontak" class="contact">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="titlepage">
+    <div id='kontak' class='contact'>
+        <div class='container'>
+            <div class='row'>
+                <div class='col-md-12'>
+                    <div class='titlepage'>
                         <h2><?= lang('lang.masukan'); ?></h2>
                         <span><?= lang('lang.title-masukan'); ?></span>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="container">
-            <div class="row">
-            <div class="col-md-12">
-                <div class="main_form row">
-                    <div class="col-md-12">
-                        <input class="form_contril" placeholder="<?= lang('lang.nama'); ?>" type="text" name="nama" id="nama">
+        <div class='container'>
+            <div class='row'>
+            <div class='col-md-12'>
+                <div class='main_form row'>
+                    <div class='col-md-12'>
+                        <input class='form_contril' placeholder='<?= lang('lang.nama'); ?>' type='text' name='nama' id='nama'>
                     </div>
-                    <div class="col-md-12">
-                        <input class="form_contril" placeholder="<?= lang('lang.notelp'); ?>" type="text" name="notelp" id="notelp">
+                    <div class='col-md-12'>
+                        <input class='form_contril' placeholder='<?= lang('lang.notelp'); ?>' type='text' name='notelp' id='notelp'>
                     </div>
-                    <div class="col-md-12">
-                        <input class="form_contril" placeholder="<?= lang('lang.e-mail'); ?>" type="text" name="email" id="email">
+                    <div class='col-md-12'>
+                        <input class='form_contril' placeholder='<?= lang('lang.e-mail'); ?>' type='text' name='email' id='email'>
                     </div>
-                    <div class="col-md-12">
-                        <textarea class="textarea" placeholder="<?= lang('lang.catatan'); ?>" type="text" name="catatan" id="catatan" rows="5"></textarea>
+                    <div class='col-md-12'>
+                        <textarea class='textarea' placeholder='<?= lang('lang.catatan'); ?>' type='text' name='catatan' id='catatan' rows='5'></textarea>
                     </div>
-                    <div class="col-sm-12">
-                        <button id="send_btn" class="send_btn">
-                            <p id="text-kirim"><?= lang('lang.kirim'); ?></p>
-                            <img id="loading-kirim" src="<?= base_url('assets/images/loading.gif'); ?>" width="40">
+                    <div class='col-sm-12'>
+                        <button id='send_btn' class='send_btn'>
+                            <p id='text-kirim'><?= lang('lang.kirim'); ?></p>
+                            <img id='loading-kirim' src='<?= base_url('assets/images/loading.gif'); ?>' width='40'>
                         </button>
                     </div>
                 </div>
