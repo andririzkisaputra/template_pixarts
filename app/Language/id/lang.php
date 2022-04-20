@@ -20,6 +20,9 @@ return [
    '201'                         => 'Menunjukkan bahwa permintaan telah berhasil dan sumber daya baru telah dibuat sebagai hasilnya.',
    'berhasil'                    => 'Sukses',
    'gagal'                       => 'Gagal',
+   'admin'                       => 'Admin',
+   'admin-header'                => 'Hello! lets get started',
+   'admin-title'                 => 'Sign in to continue.',
 
    // Input
    'nama'                        => 'Nama',

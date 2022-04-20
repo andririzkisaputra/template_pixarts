@@ -20,6 +20,9 @@ return [
    '201'                         => 'Indicates that the request has succeeded and a new resource has been created as a result.',
    'berhasil'                    => 'Success',
    'gagal'                       => 'Failed',
+   'admin'                       => 'Admin',
+   'admin-header'                => 'Hello! lets get started',
+   'admin-title'                 => 'Sign in to continue.',
 
    // Input
    'nama'                        => 'Name',

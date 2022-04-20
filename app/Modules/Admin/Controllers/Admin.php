@@ -9,7 +9,7 @@ class Admin extends BaseController
 {
     protected function render_pager($view) 
     {
-        echo view('App\Modules\Admin\Views\layout\header', $this->viewData);
+        echo view('App\Modules\Admin\Views\layout\navbar', $this->viewData);
         echo view($view);
         echo view('App\Modules\Admin\Views\layout\footer');
     }
