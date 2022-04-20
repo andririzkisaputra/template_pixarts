@@ -3,33 +3,26 @@ namespace App\Modules\Admin\Controllers;
 
 use App\Libraries\Email;
 use App\Libraries\Message;
+use App\Controllers\BaseController;
 
-class Admin extends \App\Controllers\BaseController
+class Admin extends BaseController
 {
-    public function __construct()
-	{
-        
-	}
+    protected function render_pager($view) 
+    {
+        echo view('App\Modules\Admin\Views\layout\header', $this->viewData);
+        echo view($view);
+        echo view('App\Modules\Admin\Views\layout\footer');
+    }
 
     public function index()
     {
-        return view('App\Modules\Admin\Views\index', $this->viewData);
+        return $this->render_pager('App\Modules\Admin\Views\index');
     }
 
-    public function send_email()
+    public function login()
     {
-        $result = (new Message)->error_input();
-
-        if($this->request->isAJAX()){
-            $post = $this->request->getPost();
-            $to      = 'pixartsindonesia@gmail.com';
-            $from    = 'no-replay@gmail.com';
-            $subject = 'Dari '.$post['nama'];
-            $message = $post['message'].', Hubungi Ke Nomor : '.$post['notelp'].' atau Email : '.$post['email'].', Waktu Mengirim Pesan : '.date('Y-m-d H:i:s');
-            $is_mail = (new Email)->mail($from, $to, $subject, $message);
-            $result  = ($is_mail) ? (new Message)->success_input($post) : $result;
-        }
-
-        return print_r(json_encode($result));
+        echo view('App\Modules\Admin\Views\layout\head', $this->viewData);
+        echo view('App\Modules\Admin\Views\login');
+        echo view('App\Modules\Admin\Views\layout\end');
     }
 }

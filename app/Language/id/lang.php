@@ -26,6 +26,8 @@ return [
    'notelp'                      => 'Nomor HP',  
    'e-mail'                      => 'E-mail',
    'catatan'                     => 'Catatan',
+   'password'                    => 'Kata Sandi',
+   'login'                       => 'Masuk',
 
    // Button
    'kirim'                       => 'Kirim',

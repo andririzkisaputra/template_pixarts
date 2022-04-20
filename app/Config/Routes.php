@@ -49,13 +49,22 @@ foreach ($dir as $module)
 
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
+
+// Root
 $routes->get('/', 'Home::index');
 $routes->get('/lang/{locale}', 'SelectLanguage::index');
 
 // Add Routes Modules
-$routes->group("", ["namespace" => "\App\Modules\Dashboard\Controllers"], function ($routes) {
-	$routes->add("/", "Dashboard::index");
-	$routes->add("/email", "Dashboard::send_email");
+// Admin
+$routes->group('admin', ['namespace' => '\App\Modules\Admin\Controllers'], function ($routes) {
+	$routes->add('', 'Admin::index');
+	$routes->add('login', 'Admin::login');
+});
+
+// Dashboard
+$routes->group('', ['namespace' => '\App\Modules\Dashboard\Controllers'], function ($routes) {
+	$routes->add('', 'Dashboard::index');
+	$routes->add('email', 'Dashboard::send_email');
 });
 
 /*

@@ -3,17 +3,20 @@ namespace App\Modules\Dashboard\Controllers;
 
 use App\Libraries\Email;
 use App\Libraries\Respon;
+use App\Controllers\BaseController;
 
-class Dashboard extends \App\Controllers\BaseController
+class Dashboard extends BaseController
 {
-    public function __construct()
-	{
-
-	}
+    protected function render_pager($view) 
+    {
+        echo view('App\Modules\Dashboard\Views\layout\header', $this->viewData);
+        echo view($view);
+        echo view('App\Modules\Dashboard\Views\layout\footer');
+    }
 
     public function index()
     {
-        return view('App\Modules\Dashboard\Views\index', $this->viewData);
+        return $this->render_pager('App\Modules\Dashboard\Views\index');
     }
 
     public function send_email()

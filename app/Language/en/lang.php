@@ -26,6 +26,8 @@ return [
    'notelp'                      => 'Mobile phone number',  
    'e-mail'                      => 'E-mail',
    'catatan'                     => 'Notes',
+   'password'                    => 'Password',
+   'login'                       => 'Login',
 
    // Button
    'kirim'                       => 'Send',
